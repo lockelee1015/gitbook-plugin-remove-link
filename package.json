@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "a plugin to remove link 'published with gitbook'",
   "main": "index.js",
+  "engines": {
+    "gitbook": ">1.x.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,12 +17,17 @@
   "author": "locke_lee",
   "license": "ISC",
   "gitbook": {
-        "properties": {
-            "publisher": {
-                "type": "string",
-                "default": "Joinforwin",
-                "description": "describe who publish this doc!"
-            }
-        }
+    "properties": {
+      "publisher": {
+        "type": "string",
+        "default": "Joinforwin",
+        "description": "describe who publish this doc!"
+      },
+      "link": {
+        "type": "string",
+        "default": "http://www.joinforwin.com:90",
+        "description": "the link when you click"
+      }
     }
+  }
 }
